@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .ui-bar-b .ui-btn{
+            background-color: #fff;
+        }
+        .ui-content{
+            padding:0;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+        }
+        #carousel img{
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--列表页-->
+<div data-role="page" data-theme="b" id="liebiao">
+    <div data-role="header"  data-theme="b" data-position="fixed" class="header">
+        <a href="#play" data-transition="flip" >返回</a>
+        <h2>歌手列表</h2>
+    </div>
+    <div data-role="content"  data-theme="b" >
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="#play">
+                    <img src="img/zhoujielun.jpg ">
+                    <h2>周杰伦</h2>
+                    <p>周杰伦华语音乐人</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-icon="">
+                    <img src="img/陈奕迅.jpg">
+                    <h2>陈奕迅</h2>
+                    <p>陈奕迅，香港实力歌手</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/庄心妍.jpg">
+                    <h2>庄心妍</h2>
+                    <p>庄心妍，大陆女歌手</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/张杰.jpg">
+                    <h2>张杰</h2>
+                    <p>张杰，大陆男歌手</p>
+                </a>
+            </li>  <li>
+                <a href="#">
+                    <img src="img/冷漠.jpg">
+                    <h2>冷漠</h2>
+                    <p>华语流行乐坛实力派歌手</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/凤凰传奇.jpg">
+                    <h2>凤凰传奇</h2>
+                    <p>凤凰传奇，大陆男女二人音乐组合</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/beyond.jpg ">
+                    <h2>Beyond</h2>
+                    <p>Beyond,香港殿堂级摇滚乐队</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-role="footer" data-theme="b" data-position="fixed">
+        <h2>页脚文本</h2>
+    </div>
+</div>
+<!--播放页面-->
+<div data-role="page" id="play">
+    <div data-role="header"  data-theme="b" data-position="fixed" class="header">
+        <a href="#liebiao" id="#liebiao" data-transition="flip" >返回</a>
+        <h2>周杰伦/夜曲</h2>
+    </div>
+    <div data-role="content" class="content" data-theme="b">
+       <!--轮播图-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox" id="carousel">
+                <div class="item active">
+                    <img src="img/pic1.jpg" alt="...">
+
+                </div>
+                <div class="item">
+                    <img src="img/pic2.jpg " alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/pic3.jpg " alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/pic4.jpg " alt="...">
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <ul data-role="listview" id="length">
+            <li>
+                <a href="#">
+                夜曲
+                <audio id="player" src="http://fs.w.kugou.com/201711192206/2fa5d871816c8d59caf95ee611ff5be6/G005/M0A/0A/07/pYYBAFTXZWWAIRJRADedO-0f4mE818.mp3"></audio>
+                </a>
+            </li>
+            <li><a href="#">稻香</a></li>
+            <li><a href="#">听妈妈的话</a></li>
+            <li><a href="#">菊花台</a></li>
+            <li><a href="#">困兽之斗</a></li>
+            <li><a href="#">爱在西元前</a></li>
+        </ul>
+    </div>
+    <div data-role="footer" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-iconpos="top" class="prev">上一首</a></li>
+                <li><a href="#" data-iconpos="top" class="play">播放</a></li>
+                <li><a href="#" data-iconpos="top">下一首</a></li>
+                <li><a href="#" data-iconpos="top">随便听听</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.js"></script>
+<script src="js/bootstrap.js "></script>
+<script>
+//    轮播图
+$(function(){
+    $('#myCarousel').carousel({
+        interval:2000
+    });//每隔5秒自动轮播
+})
+
+
+//暂停 播放
+    $(".play").on("click",function(){
+        playMusic();
+    })
+    function playMusic() {
+        var player = $("#player")[0]; /*jquery对象转换成js对象*/
+        if (player.paused){ /*如果已经暂停*/
+            player.play(); /*播放*/
+            $(".play").html("暂停");
+        }else {
+            player.pause();/*暂停*/
+            $(".play").html("播放");
+        }
+    }
+</script>
+
+
+
+</html>
